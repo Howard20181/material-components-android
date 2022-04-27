@@ -18,7 +18,7 @@ dependencies {
   api "androidx.preference:preference:1.1.1"
 
   api 'com.google.guava:guava:27.0.1-android'
-
+  api 'org.lsposed.hiddenapibypass:hiddenapibypass:4.3'
   api project(':lib')
 
   api compatibility("recyclerViewSelection")

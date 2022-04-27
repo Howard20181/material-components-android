@@ -21,7 +21,12 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import androidx.multidex.MultiDexApplication;
 import androidx.appcompat.app.AppCompatDelegate;
+
+import android.os.Build;
 import android.util.Log;
+
+import org.lsposed.hiddenapibypass.HiddenApiBypass;
+
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasAndroidInjector;
@@ -40,6 +45,13 @@ public class CatalogApplication extends MultiDexApplication implements HasAndroi
 
   @Inject DispatchingAndroidInjector<Object> androidInjector;
   @Inject BaseCatalogPreferences catalogPreferences;
+
+  static {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      // TODO: set specific class name
+      HiddenApiBypass.addHiddenApiExemptions("");
+    }
+  }
 
   @Override
   public void onCreate() {

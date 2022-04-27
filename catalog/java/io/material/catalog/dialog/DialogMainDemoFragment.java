@@ -34,7 +34,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import io.material.catalog.feature.DemoFragment;
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +76,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.message_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setMessage(message)
                 .setPositiveButton(positiveText, null)
                 .setNegativeButton(negativeText, null)
@@ -88,7 +87,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.long_message_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setMessage(longMessage)
                 .setPositiveButton(positiveText, null)
                 .setNegativeButton(negativeText, null)
@@ -99,7 +98,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(positiveText, null)
                 .setNegativeButton(negativeText, null)
@@ -110,7 +109,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_message_3_long_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setMessage(message)
                 .setPositiveButton(getResources().getString(R.string.long_positive), null)
@@ -123,7 +122,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.long_title_message_too_long_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(getResources().getString(R.string.long_title))
                 .setMessage(message)
                 .setPositiveButton(getResources().getString(R.string.too_long_positive), null)
@@ -136,7 +135,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.icon_title_message_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setMessage(message)
                 .setPositiveButton(positiveText, null)
@@ -149,7 +148,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.icon_title_message_2_actions_centered,
         v ->
-            new MaterialAlertDialogBuilder(getContext(), getCenteredTitleThemeOverlay())
+            new BlurBehindDialogBuilder(getContext(), getCenteredTitleThemeOverlay())
                 .setTitle(title)
                 .setMessage(message)
                 .setPositiveButton(positiveText, null)
@@ -162,7 +161,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.edit_text,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setView(R.layout.edit_text)
                 .setPositiveButton(
@@ -182,7 +181,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_choices_as_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(positiveText, null)
                 .setItems(choices, null)
@@ -193,7 +192,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_checkboxes_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(
                     positiveText,
@@ -217,7 +216,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_radiobuttons_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(
                     positiveText,
@@ -239,7 +238,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_slider_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(positiveText, null)
                 .setNegativeButton(negativeText, null)
@@ -251,7 +250,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_scrolling_2_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setMessage(multiLineMessage.toString())
                 .setPositiveButton(positiveText, null)
@@ -263,7 +262,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_scrolling,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setMessage(multiLineMessage.toString())
                 .show());
 
@@ -272,7 +271,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.title_2_short_actions,
         v ->
-            new MaterialAlertDialogBuilder(getContext())
+            new BlurBehindDialogBuilder(getContext())
                 .setTitle(title)
                 .setPositiveButton(R.string.short_text_1, null)
                 .setNegativeButton(R.string.short_text_2, null)
@@ -283,7 +282,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.icon_title_message_2_actions_fullwidth_buttons,
         v ->
-            new MaterialAlertDialogBuilder(getContext(), getDialogFullWidthButtonsStyle())
+            new BlurBehindDialogBuilder(getContext(), getDialogFullWidthButtonsStyle())
                 .setTitle(title)
                 .setMessage(message)
                 .setPositiveButton(positiveText, null)
@@ -296,7 +295,7 @@ public class DialogMainDemoFragment extends DemoFragment {
         dialogLaunchersLayout,
         R.string.icon_title_message_2_actions_centered_fullwidth_buttons,
         v ->
-            new MaterialAlertDialogBuilder(getContext(), getCenteredDialogFullWidthButtonsStyle())
+            new BlurBehindDialogBuilder(getContext(), getCenteredDialogFullWidthButtonsStyle())
                 .setTitle(title)
                 .setMessage(message)
                 .setPositiveButton(positiveText, null)
